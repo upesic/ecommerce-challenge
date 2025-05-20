@@ -29,6 +29,18 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
+    const syncCart = (e: StorageEvent) => {
+      if (e.key === 'cart') {
+        const updated = e.newValue ? JSON.parse(e.newValue) : [];
+        setItems(updated);
+      }
+    };
+
+    window.addEventListener('storage', syncCart);
+    return () => window.removeEventListener('storage', syncCart);
+  }, []);
+
+  useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(items));
   }, [items]);
 
