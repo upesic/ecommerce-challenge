@@ -1,10 +1,8 @@
-'use client';
-
 import Link from 'next/link';
 
 export default function Header() {
   return (
-    <header className="bg-[#f3eee7] flex justify-between items-center px-8 py-4 shadow-md text-[#e89830]">
+    <header className="bg-[#f3eee7] flex justify-between items-center px-8 py-4 shadow-md text-[#97784e]">
       <div className="text-2xl font-bold">IMPACT</div>
       <nav className="flex gap-6 items-center">
         <Link href="/" className="hover:underline">Home</Link>

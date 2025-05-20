@@ -1,12 +1,4 @@
-import Link from 'next/link';
-import Image from 'next/image';
-
-const imageMap: Record<string, string> = {
-  electronics: '/images/electronics.jpg',
-  jewelery: '/images/jewelery.jpg',
-  "men's clothing": '/images/men-clothing.jpg',
-  "women's clothing": '/images/women-clothing.jpg',
-};
+import CategoryItem from './CategoryItem';
 
 export default async function CategoryList() {
   let categories: string[] = [];
@@ -33,19 +25,7 @@ export default async function CategoryList() {
       <h2 className="text-2xl font-bold mb-6">Explore by Category</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {categories.map((cat) => (
-          <Link key={cat} href={`/category/${encodeURIComponent(cat)}`}>
-            <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer bg-white">
-              <div className="aspect-video relative w-full">
-                <Image
-                  src={imageMap[cat]}
-                  alt={cat}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div className="p-3 text-center font-semibold capitalize text-[#97784e]">{cat}</div>
-            </div>
-          </Link>
+          <CategoryItem key={cat} name={cat} />
         ))}
       </div>
     </section>
