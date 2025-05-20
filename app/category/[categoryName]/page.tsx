@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import ProductItem from '@/components/ProductItem';
 
-interface Product {
+type Product = {
   id: number;
   title: string;
   price: number;
@@ -40,7 +40,7 @@ export default async function CategoryPage({ params }: Params) {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {products.map(product => (
-          <ProductItem key={product.id} image={product.image} price={product.price} title={product.title} />
+          <ProductItem key={product.id} image={product.image} price={product.price} title={product.title} id={product.id} />
         ))}
       </div>
     </main>
