@@ -1,11 +1,15 @@
 'use client';
 
 import CartProduct from '@/components/CartProduct';
+import Spinner from '@/components/Spinner';
 import { useCart } from '@/context/CartContext';
 
 export default function CartPage() {
-  const { items } = useCart();
+  const { items, isLoaded } = useCart();
 
+  if (!isLoaded) {
+    return <Spinner />
+  }
   const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (
