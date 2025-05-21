@@ -24,7 +24,7 @@ export default function CategoryItem({ name }: CategoryItemProps) {
             className="object-cover"
           />
         </div>
-        <div className="p-3 text-center font-semibold capitalize text-[#97784e]">{name}</div>
+        <div className="p-3 text-center font-semibold capitalize text-secondary">{name}</div>
       </div>
     </Link>
   )

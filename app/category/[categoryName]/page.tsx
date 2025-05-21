@@ -34,9 +34,9 @@ export default async function CategoryPage({ params }: Params) {
   return (
     <main className="max-w-6xl mx-auto px-6 py-10">
       <div className="mb-8">
-        <Link href="/" className="text-[#e89830] hover:underline">Back to Main Page</Link>
+        <Link href="/" className="text-primary hover:underline">Back to Main Page</Link>
         <h1 className="text-3xl font-bold mt-4 capitalize">{decodeURIComponent(categoryName)}</h1>
-        <p className="text-[#97784e] mt-1">{products.length} products</p>
+        <p className="text-secondary mt-1">{products.length} products</p>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {products.map(product => (

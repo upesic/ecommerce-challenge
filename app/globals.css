@@ -2,12 +2,34 @@
 
 :root {
   --background: #f7f7f7;
+  --background-secondary: #f3eee7;
   --foreground: #171717;
+  --primary: #e89830;
+  --secondary: #97784e;
+  --error: #D71548;
+  --text-primary: #1b150e;
+  --text-secondary: #4a5565;
+  --hover-primary: #d48a28;
+  --hover: #e5e7eb;
+  --accent: #96C346;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
   --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-error: var(--error);
+  --color-accent: var(--accent);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+
+  --color-hover: var(--hover);
+  --color-hover-primary: var(--hover-primary);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
