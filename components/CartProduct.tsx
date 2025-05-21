@@ -1,10 +1,7 @@
-import { CartItem } from '@/context/CartContext';
 import Image from 'next/image';
 import CartProductFooter from './CartProductFooter';
+import { CartProductProps } from '@/types';
 
-interface CartProductProps {
-  item: CartItem
-};
 
 export default function CartProduct({ item }: CartProductProps) {
   const { id, title, image, price, quantity } = item;

@@ -1,14 +1,8 @@
 'use client'
 
 import { useCart } from '@/context/CartContext';
+import { ProductItemProps } from '@/types';
 import Image from 'next/image';
-
-interface ProductItemProps {
-  id: number;
-  image?: string;
-  title: string;
-  price: number;
-}
 
 export default function ProductItem(props: ProductItemProps) {
   const { id, image, title, price } = props;

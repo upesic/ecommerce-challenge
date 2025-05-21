@@ -1,10 +1,6 @@
 import { useCart } from '@/context/CartContext';
+import { CartProductFooterProps } from '@/types';
 import { TrashIcon } from '@heroicons/react/24/outline';
-
-interface CartProductFooterProps {
-  productId: number,
-  productQuantity: number
-}
 
 export default function CartProductFooter({ productId, productQuantity }: CartProductFooterProps) {
   const { removeFromCart, updateQuantity } = useCart();

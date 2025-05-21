@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { CategoryItemProps } from '@/types';
 
 const imageMap: Record<string, string> = {
   electronics: '/images/electronics.jpg',
@@ -7,10 +8,6 @@ const imageMap: Record<string, string> = {
   "men's clothing": '/images/men-clothing.jpg',
   "women's clothing": '/images/women-clothing.jpg',
 };
-
-interface CategoryItemProps {
-  name: string;
-}
 
 export default function CategoryItem({ name }: CategoryItemProps) {
   return (
