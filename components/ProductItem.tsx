@@ -3,6 +3,7 @@
 import { useCart } from '@/context/CartContext';
 import { ProductItemProps } from '@/types';
 import ItemImageContainer from './ItemImageContainer';
+import Button from './Button';
 
 export default function ProductItem(props: ProductItemProps) {
   const { id, image, title, price, priority } = props;
@@ -16,9 +17,7 @@ export default function ProductItem(props: ProductItemProps) {
           <h2 className="font-semibold text-lg mb-2 text-secondary">{title}</h2>
           <p className="font-bold">${price}</p>
         </div>
-        <button onClick={() => addToCart({ id, title, price, image, quantity: 1 })} className="mt-6 bg-primary text-white font-semibold px-4 py-2 rounded hover:bg-hover-primary transition cursor-pointer w-1/2">
-          Add to Cart
-        </button>
+        <Button onClick={() => addToCart({ id, title, price, image, quantity: 1 })} className='mt-6 w-1/2'>Add to cart</Button>
       </div>
     </div>
   );

@@ -46,3 +46,43 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-hover-primary);
+}
+
+.btn-secondary {
+  padding: 0.25rem 0.5rem;
+  font-size: 14px;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-hover)
+}
+
+.btn-secondary:disabled {
+  opacity: 0.5;
+}
+
+.btn-secondary:disabled:hover {
+  cursor: not-allowed !important;
+  background-color: unset !important;
+}
+
+.btn-error {
+  color: var(--color-error);
+}
