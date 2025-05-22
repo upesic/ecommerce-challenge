@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import CartProductFooter from './CartProductFooter';
 import { CartProductProps } from '@/types';
+import ItemImageContainer from './ItemImageContainer';
 
 
 export default function CartProduct({ item }: CartProductProps) {
@@ -8,13 +8,7 @@ export default function CartProduct({ item }: CartProductProps) {
 
   return (
     <div className="flex flex-col sm:flex-row items-center bg-white p-4 rounded shadow-md gap-4">
-      <div className="relative w-32 h-32">
-        {image ? (
-          <Image src={image} alt={title} fill className="object-contain" />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center text-text-secondary">No image</div>
-        )}
-      </div>
+      <ItemImageContainer image={image} title={title} containerClassname={'w-32 h-32'} />
       <div className="flex-1 w-full">
         <h2 className="font-semibold text-lg mb-1 text-secondary">{title}</h2>
         <p className="font-bold mb-2">${price}</p>

@@ -9,7 +9,7 @@ const imageMap: Record<string, string> = {
   "women's clothing": '/images/women-clothing.jpg',
 };
 
-export default function CategoryItem({ name }: CategoryItemProps) {
+export default function CategoryItem({ name, priority }: CategoryItemProps) {
   return (
     <Link href={`/category/${encodeURIComponent(name)}`}>
       <div className="rounded-lg overflow-hidden shadow-md hover:shadow-lg transition cursor-pointer bg-white">
@@ -19,6 +19,8 @@ export default function CategoryItem({ name }: CategoryItemProps) {
             alt={name}
             fill
             className="object-cover"
+            priority={priority}
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         </div>
         <div className="p-3 text-center font-semibold capitalize text-secondary">{name}</div>

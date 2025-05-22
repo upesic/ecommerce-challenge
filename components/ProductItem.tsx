@@ -2,28 +2,15 @@
 
 import { useCart } from '@/context/CartContext';
 import { ProductItemProps } from '@/types';
-import Image from 'next/image';
+import ItemImageContainer from './ItemImageContainer';
 
 export default function ProductItem(props: ProductItemProps) {
-  const { id, image, title, price } = props;
+  const { id, image, title, price, priority } = props;
   const { addToCart } = useCart();
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
-      <div className="relative aspect-video">
-        {image ? (
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-contain p-4"
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center text-text-secondary">
-            No Image
-          </div>
-        )}
-      </div>
+      <ItemImageContainer image={image} title={title} containerClassname={'aspect-video'} imageClassName={'p-4'} priority={priority} />
       <div className="p-4 flex flex-col justify-between flex-grow">
         <div>
           <h2 className="font-semibold text-lg mb-2 text-secondary">{title}</h2>

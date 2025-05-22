@@ -22,7 +22,7 @@ export default function CartPage() {
           {items.map((item) => (
             <CartProduct key={item.id} item={item} />
           ))}
-          <div className="text-right text-xl font-bold text-text-primary">
+          <div className="text-right text-xl font-bold">
             Total: ${total.toFixed(2)}
           </div>
         </div>

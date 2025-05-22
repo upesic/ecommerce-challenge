@@ -5,6 +5,7 @@ import { fetchProductsByCategory } from '@/lib/api';
 import { Params } from '@/types';
 
 export default async function CategoryPage({ params }: Params) {
+  // await is added for warning in console
   const { categoryName } = await params;
 
   try {
@@ -21,8 +22,8 @@ export default async function CategoryPage({ params }: Params) {
           {products.length === 0 ? (
             <p>There are no products for selected category.</p>
           ) :
-            products.map(product => (
-              <ProductItem key={product.id} image={product.image} price={product.price} title={product.title} id={product.id} />
+            products.map((product, index) => (
+              <ProductItem key={product.id} image={product.image} price={product.price} title={product.title} id={product.id} priority={index === 0} />
             ))}
         </div>
       </main>

@@ -23,6 +23,7 @@ export interface CartProductFooterProps {
 
 export interface CategoryItemProps {
   name: string;
+  priority: boolean;
 }
 
 export interface ProductItemProps {
@@ -30,6 +31,7 @@ export interface ProductItemProps {
   image?: string;
   title: string;
   price: number;
+  priority: boolean;
 }
 
 export type Product = {
@@ -45,3 +47,10 @@ export type Product = {
   };
 };
 
+export interface ItemImageContainerProps {
+  image?: string;
+  title: string;
+  imageClassName?: string;
+  containerClassname?: string;
+  priority?: boolean;
+}
