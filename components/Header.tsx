@@ -10,7 +10,7 @@ export default function Header() {
   const count = getTotalCount();
   return (
     <header className="bg-background-secondary flex justify-between items-center px-8 py-4 shadow-md text-secondary">
-      <div className="text-2xl font-bold">IMPACT</div>
+      <Link href="/" className="text-2xl font-bold">IMPACT</Link>
       <nav className="flex gap-6 items-center">
         <Link href="/" className="hover:underline">Home</Link>
         <Link href="/cart" className="relative">

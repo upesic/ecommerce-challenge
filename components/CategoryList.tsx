@@ -8,7 +8,7 @@ export default async function CategoryList() {
 
     return (
       <section className="w-full max-w-6xl mx-auto">
-        <h2 className="text-2xl font-bold mb-6">Explore by Category</h2>
+        <h2 className="text-2xl font-bold mb-6">Explore by category</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
           {categories.map((cat, index) => (
             <CategoryItem key={cat} name={cat} priority={index === 0} />
