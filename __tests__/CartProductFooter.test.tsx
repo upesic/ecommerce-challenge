@@ -4,7 +4,6 @@ import { ToastProvider } from '@/context/ToastContext';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-// Mock funkcije
 const mockRemove = jest.fn();
 const mockUpdate = jest.fn();
 
