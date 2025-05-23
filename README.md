@@ -23,9 +23,9 @@ Install dependencies:
 ```bash
 npm install
 ```
-Before running the app, rename the provided example-env file to .env:
+Before running the app, rename the provided .example-env file to .env:
 ```bash
-mv example-env .env
+mv .example-env .env
 ```
 Run the development server:
 
