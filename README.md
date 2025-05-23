@@ -18,15 +18,16 @@ git clone https://github.com/upesic/ecommerce-challenge.git
 cd ecommerce-challenge
 
 ```
-Install dependencies
+Install dependencies:
 
 ```bash
 npm install
 ```
-Before running the app, rename the provided example-env file to .env
-This .env file is used to configure the API base URL.
-
-Run the development server
+Before running the app, rename the provided example-env file to .env:
+```bash
+mv example-env .env
+```
+Run the development server:
 
 ```bash
 npm run dev
@@ -34,6 +35,10 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 ## Running Tests
+
+To run tests:
 ```bash
 npm run test
 ```
+Tests are written using **Jest** and **React Testing Library**.
+Test coverage includes both server and client components, with mocks for API calls and localStorage behavior.
